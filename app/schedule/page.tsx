@@ -502,7 +502,6 @@ export default function SchedulePage() {
   const [currentComboIndex, setCurrentComboIndex] = useState(0);
   const [preference, setPreference] = useState<Preference>("most-days-off");
   const [generated, setGenerated] = useState(false);
-  const [generating, setGenerating] = useState(false);
   const [pinnedCourses, setPinnedCourses] = useState<Record<string, CourseOption>>({});
   const [programCourses, setProgramCourses] = useState<
     { subject: string; catalog: string; code: string }[]
@@ -583,14 +582,43 @@ export default function SchedulePage() {
     fetchTerms();
   }, []);
 
-  useEffect(() => {
-    if (!searchQuery.trim()) { setSearchResults([]); return; }
-    const q = searchQuery.toUpperCase();
-    const results = programCourses
-      .filter((c) => c.code.includes(q) && !selectedCourses.find((s) => s.subject === c.subject && s.catalog === c.catalog))
-      .slice(0, 6);
-    setSearchResults(results.map((r) => ({ subject: r.subject, catalog: r.catalog, title: r.code })));
-  }, [searchQuery, programCourses, selectedCourses]);
+useEffect(() => {
+  if (!searchQuery.trim()) { setSearchResults([]); return; }
+  const q = searchQuery.toUpperCase().trim();
+
+  // First search program courses
+  const programMatches = programCourses
+    .filter((c) =>
+      c.code.includes(q) &&
+      !selectedCourses.find((s) => s.subject === c.subject && s.catalog === c.catalog)
+    )
+    .slice(0, 6)
+    .map((r) => ({ subject: r.subject, catalog: r.catalog, title: r.code }));
+
+  if (programMatches.length >= 3) {
+    setSearchResults(programMatches);
+    return;
+  }
+
+  // Fall back to full catalog search
+  import("@/data/course_catalog.json").then((mod) => {
+    const catalog = mod.default as Record<string, { title: string; subject: string; catalog: string }>;
+    const catalogMatches = Object.entries(catalog)
+      .filter(([code, course]) =>
+        (code.includes(q) || course.title.toUpperCase().includes(q)) &&
+        !selectedCourses.find((s) => s.subject === course.subject && s.catalog === course.catalog) &&
+        !programCourses.find((p) => p.code === code)
+      )
+      .slice(0, 6 - programMatches.length)
+      .map(([code, course]) => ({
+        subject: course.subject,
+        catalog: course.catalog,
+        title: `${code} — ${course.title}`,
+      }));
+
+    setSearchResults([...programMatches, ...catalogMatches]);
+  });
+}, [searchQuery, programCourses, selectedCourses]);
 
   async function addCourse(subject: string, catalog: string) {
     setSearchQuery("");

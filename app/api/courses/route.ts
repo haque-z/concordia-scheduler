@@ -1,4 +1,22 @@
-import upcomingSchedules from "@/data/upcoming_schedules.json";
+import { readFileSync } from "fs";
+import path from "path";
+
+type ScheduleSection = {
+  subject: string;
+  catalog: string;
+  termCode: string;
+  [key: string]: string;
+};
+
+let upcomingCache: ScheduleSection[] | null = null;
+
+function getUpcomingSchedules(): ScheduleSection[] {
+  if (!upcomingCache) {
+    const filePath = path.join(process.cwd(), "data", "upcoming_schedules.json");
+    upcomingCache = JSON.parse(readFileSync(filePath, "utf-8"));
+  }
+  return upcomingCache!;
+}
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -11,46 +29,51 @@ export async function GET(request: Request) {
   const key = process.env.CONCORDIA_API_KEY;
   const credentials = btoa(`${user}:${key}`);
 
-  let url = "";
-
-  if (type === "schedule") {
-    url = `https://opendata.concordia.ca/API/v1/course/schedule/filter/*/${subject}/${catalog}`;
-  } else if (type === "sessions") {
-    url = `https://opendata.concordia.ca/API/v1/course/session/filter/UGRD/${termCode}/*`;
-  } else {
-    url = `https://opendata.concordia.ca/API/v1/course/catalog/filter/${subject}/${catalog}/*`;
+  if (type === "sessions") {
+    const url = `https://opendata.concordia.ca/API/v1/course/session/filter/UGRD/${termCode}/*`;
+    const response = await fetch(url, {
+      headers: { Authorization: `Basic ${credentials}` },
+    });
+    const data = await response.json();
+    return Response.json(data);
   }
 
-  const response = await fetch(url, {
-    headers: {
-      Authorization: `Basic ${credentials}`,
-    },
-  });
-
-  const data = await response.json();
+  if (type === "catalog") {
+    const url = `https://opendata.concordia.ca/API/v1/course/catalog/filter/${subject}/${catalog}/*`;
+    const response = await fetch(url, {
+      headers: { Authorization: `Basic ${credentials}` },
+    });
+    const data = await response.json();
+    return Response.json(data);
+  }
 
   if (type === "schedule") {
-    const apiResults = Array.isArray(data) ? data : [];
-    const newerTerms = new Set(["2261", "2262", "2264"]);
+    const newerTerms = new Set(["2261", "2262", "2263", "2264"]);
 
-    // Filter API results to requested term if specified
-    const filteredApi = termCode !== "*"
-      ? apiResults.filter((s: { termCode: string }) => s.termCode === termCode)
-      : apiResults;
-
-    // Check if we need to supplement with local data
+    // For newer terms, use local data only
     if (termCode !== "*" && newerTerms.has(termCode)) {
-      const localResults = (upcomingSchedules as { subject: string; catalog: string; termCode: string }[]).filter(
+      const local = getUpcomingSchedules().filter(
         (s) =>
+          s.termCode === termCode &&
           (subject === "*" || s.subject === subject) &&
-          (catalog === "*" || s.catalog === catalog) &&
-          s.termCode === termCode
+          (catalog === "*" || s.catalog === catalog)
       );
-      return Response.json(localResults);
+      return Response.json(local);
     }
 
-    return Response.json(filteredApi);
+    // For current/older terms, use API
+    const url = `https://opendata.concordia.ca/API/v1/course/schedule/filter/*/${subject}/${catalog}`;
+    const response = await fetch(url, {
+      headers: { Authorization: `Basic ${credentials}` },
+    });
+    const data = await response.json();
+    const filtered = Array.isArray(data)
+      ? data.filter((s: { termCode: string }) =>
+          termCode === "*" || s.termCode === termCode
+        )
+      : [];
+    return Response.json(filtered);
   }
 
-  return Response.json(data);
+  return Response.json([]);
 }

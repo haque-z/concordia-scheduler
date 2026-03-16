@@ -23,7 +23,6 @@ export default function Onboarding() {
   }
 
   function handleCoopSelect(coop: string) {
-    setSelectedCoop(coop);
     const profile = {
       programId: selectedProgram,
       entry: selectedEntry,
