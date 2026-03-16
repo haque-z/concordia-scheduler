@@ -112,15 +112,23 @@ export default function Dashboard() {
               {profile.coop ? " · Co-op" : ""}
             </p>
           </div>
-          <button
-            onClick={() => {
-              localStorage.removeItem("studentProfile");
-              router.push("/onboarding");
-            }}
-            className="text-xs text-gunmetal border border-dustgrey rounded-lg px-3 py-1.5 hover:border-amaranth hover:text-amaranth transition-colors cursor-pointer"
-          >
-            Change Program
-          </button>
+            <div className="flex items-center gap-2">
+            <button
+                onClick={() => router.push("/schedule")}
+                className="text-xs text-white bg-amaranth rounded-lg px-3 py-1.5 hover:bg-gunmetal transition-colors cursor-pointer"
+            >
+                Schedule Builder →
+            </button>
+            <button
+                onClick={() => {
+                localStorage.removeItem("studentProfile");
+                router.push("/onboarding");
+                }}
+                className="text-xs text-gunmetal border border-dustgrey rounded-lg px-3 py-1.5 hover:border-amaranth hover:text-amaranth transition-colors cursor-pointer"
+            >
+                Change Program
+            </button>
+            </div>
         </div>
 
         {/* Credits overview */}
