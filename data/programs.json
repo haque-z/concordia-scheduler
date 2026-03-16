@@ -1,0 +1,987 @@
+{
+  "programs": [
+    {
+      "id": "comp-general",
+      "degree": "BCompSc",
+      "name": "Computer Science – General",
+      "department": "Computer Science and Software Engineering",
+      "graduation_requirements": {
+        "total_credits": 90,
+        "categories": [
+          { "name": "Computer Science Core", "credits": 33 },
+          { "name": "Computer Science Complementary Core", "credits": 6 },
+          { "name": "Artificial Intelligence Electives", "credits": 4 },
+          { "name": "Computer Science Electives", "credits": 14 },
+          { "name": "Mathematics Electives", "credits": 6 },
+          { "name": "Minor or General Electives", "credits": 27 }
+        ]
+      },
+      "sequences": {
+        "september": [
+          {
+            "year": 1,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 233", "title": "Probability and Statistics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 205"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "COMP 354", "title": "Introduction to Software Engineering", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Winter",
+            "courses": [
+              { "code": "ENCS 393", "title": "Social and Ethical Dimensions of Information and Communication Technologies", "credits": 3.0, "prerequisites": ["ENCS 282"] }
+            ]
+          }
+        ],
+        "january": [
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 233", "title": "Probability and Statistics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 205"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "COMP 354", "title": "Introduction to Software Engineering", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Winter",
+            "courses": [
+              { "code": "ENCS 393", "title": "Social and Ethical Dimensions of Information and Communication Technologies", "credits": 3.0, "prerequisites": ["ENCS 282"] }
+            ]
+          }
+        ],
+        "coop": [
+          {
+            "year": 1,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 233", "title": "Probability and Statistics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 205"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] }
+            ]
+          },
+          { "year": 2, "term": "Fall", "courses": [{ "code": "WORK TERM 1", "title": "Work Term 1", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] },
+              { "code": "COMP 354", "title": "Introduction to Software Engineering", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] }
+            ]
+          },
+          { "year": 2, "term": "Summer", "courses": [{ "code": "WORK TERM 2", "title": "Work Term 2", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "ENCS 393", "title": "Social and Ethical Dimensions of Information and Communication Technologies", "credits": 3.0, "prerequisites": ["ENCS 282"] }
+            ]
+          },
+          { "year": 3, "term": "Winter", "courses": [{ "code": "WORK TERM 3", "title": "Work Term 3", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 3,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "comp-data-science",
+      "degree": "BCompSc",
+      "name": "Joint Major in Data Science",
+      "department": "Computer Science and Software Engineering",
+      "graduation_requirements": {
+        "total_credits": 90,
+        "notes": ["COMP 233 must be replaced by MAST 221", "Offered in collaboration with the Department of Mathematics and Statistics"],
+        "categories": [
+          { "name": "Computer Science Core", "credits": 33 },
+          { "name": "Computer Science Complementary Core", "credits": 6 },
+          { "name": "Data Science Courses", "credits": 16 },
+          { "name": "Mathematics and Statistics Core", "credits": 18 },
+          { "name": "Computer Science Electives", "credits": 6 },
+          { "name": "General Electives", "credits": 11 }
+        ]
+      },
+      "sequences": {
+        "september": [
+          {
+            "year": 1,
+            "term": "Fall",
+            "courses": [
+              { "code": "MAST 218", "title": "Multivariable Calculus I", "credits": 3.0, "prerequisites": ["MATH 204", "MATH 205"] },
+              { "code": "MAST 221", "title": "Applied Probability", "credits": 3.0, "prerequisites": ["MATH 204", "MATH 205"], "corequisites": ["MAST 218"] },
+              { "code": "STAT 280", "title": "Introduction to Statistical Programming", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "MAST 234", "title": "Linear Algebra and Applications I", "credits": 3.0, "prerequisites": ["MATH 204"] },
+              { "code": "MAST 333", "title": "Applied Statistics", "credits": 3.0, "prerequisites": ["MAST 221"] },
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] },
+              { "code": "COMP 361", "title": "Elementary Numerical Methods", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 354", "title": "Introduction to Software Engineering", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] },
+              { "code": "COMP 432", "title": "Machine Learning", "credits": 4.0, "prerequisites": ["COMP 352"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "MAST 387", "title": "Data Science Lab", "credits": 3.0, "prerequisites": ["STAT 280", "MAST 333"] },
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] },
+              { "code": "COMP 433", "title": "Introduction to Deep Learning", "credits": 4.0, "prerequisites": ["COMP 352"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Winter",
+            "courses": [
+              { "code": "ENCS 393", "title": "Social and Ethical Dimensions of Information and Communication Technologies", "credits": 3.0, "prerequisites": ["ENCS 282"] },
+              { "code": "COMP 353", "title": "Databases", "credits": 4.0, "prerequisites": ["COMP 232", "COMP 352"] },
+              { "code": "SOEN 471", "title": "Big Data Analytics", "credits": 4.0, "prerequisites": ["COMP 352"] }
+            ]
+          }
+        ],
+        "january": [
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "MAST 218", "title": "Multivariable Calculus I", "credits": 3.0, "prerequisites": ["MATH 204", "MATH 205"] },
+              { "code": "MAST 234", "title": "Linear Algebra and Applications I", "credits": 3.0, "prerequisites": ["MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] },
+              { "code": "MAST 221", "title": "Applied Probability", "credits": 3.0, "prerequisites": ["MATH 204", "MATH 205"], "corequisites": ["MAST 218"] },
+              { "code": "STAT 280", "title": "Introduction to Statistical Programming", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] },
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 354", "title": "Introduction to Software Engineering", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] },
+              { "code": "COMP 432", "title": "Machine Learning", "credits": 4.0, "prerequisites": ["COMP 352"] },
+              { "code": "MAST 333", "title": "Applied Statistics", "credits": 3.0, "prerequisites": ["MAST 221"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "MAST 387", "title": "Data Science Lab", "credits": 3.0, "prerequisites": ["STAT 280", "MAST 333"] },
+              { "code": "COMP 361", "title": "Elementary Numerical Methods", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "COMP 433", "title": "Introduction to Deep Learning", "credits": 4.0, "prerequisites": ["COMP 352"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Winter",
+            "courses": [
+              { "code": "ENCS 393", "title": "Social and Ethical Dimensions of Information and Communication Technologies", "credits": 3.0, "prerequisites": ["ENCS 282"] },
+              { "code": "COMP 353", "title": "Databases", "credits": 4.0, "prerequisites": ["COMP 232", "COMP 352"] },
+              { "code": "SOEN 471", "title": "Big Data Analytics", "credits": 4.0, "prerequisites": ["COMP 352"] }
+            ]
+          }
+        ],
+        "coop": [
+          {
+            "year": 1,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] },
+              { "code": "MAST 218", "title": "Multivariable Calculus I", "credits": 3.0, "prerequisites": ["MATH 204", "MATH 205"] },
+              { "code": "MAST 221", "title": "Applied Probability", "credits": 3.0, "prerequisites": ["MATH 204", "MATH 205"], "corequisites": ["MAST 218"] },
+              { "code": "STAT 280", "title": "Introduction to Statistical Programming", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] },
+              { "code": "MAST 234", "title": "Linear Algebra and Applications I", "credits": 3.0, "prerequisites": ["MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] },
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] }
+            ]
+          },
+          { "year": 2, "term": "Fall", "courses": [{ "code": "WORK TERM 1", "title": "Work Term 1", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "SOEN 471", "title": "Big Data Analytics", "credits": 4.0, "prerequisites": ["COMP 352"] },
+              { "code": "MAST 333", "title": "Applied Statistics", "credits": 3.0, "prerequisites": ["MAST 221"] },
+              { "code": "COMP 432", "title": "Machine Learning", "credits": 4.0, "prerequisites": ["COMP 352"] }
+            ]
+          },
+          { "year": 2, "term": "Summer", "courses": [{ "code": "WORK TERM 2", "title": "Work Term 2", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "MAST 387", "title": "Data Science Lab", "credits": 3.0, "prerequisites": ["STAT 280", "MAST 333"] },
+              { "code": "COMP 354", "title": "Introduction to Software Engineering", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] },
+              { "code": "COMP 361", "title": "Elementary Numerical Methods", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "COMP 433", "title": "Introduction to Deep Learning", "credits": 4.0, "prerequisites": ["COMP 352"] }
+            ]
+          },
+          { "year": 3, "term": "Winter", "courses": [{ "code": "WORK TERM 3", "title": "Work Term 3", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 3,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] },
+              { "code": "COMP 353", "title": "Databases", "credits": 4.0, "prerequisites": ["COMP 232", "COMP 352"] },
+              { "code": "ENCS 393", "title": "Social and Ethical Dimensions of Information and Communication Technologies", "credits": 3.0, "prerequisites": ["ENCS 282"] }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "comp-health-life-sciences",
+      "degree": "BCompSc",
+      "name": "Computer Science – Health and Life Sciences",
+      "department": "Computer Science and Software Engineering",
+      "graduation_requirements": {
+        "total_credits": 90,
+        "categories": [
+          { "name": "Computer Science Core", "credits": 33 },
+          { "name": "Health and Life Sciences Core", "credits": 24 },
+          { "name": "Health and Life Sciences Complementary Core", "credits": 6 },
+          { "name": "Health and Life Sciences Electives", "credits": 12 },
+          { "name": "Mathematics Electives", "credits": 6 },
+          { "name": "General Electives", "credits": 9 }
+        ]
+      },
+      "sequences": {
+        "september": [
+          {
+            "year": 1,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] },
+              { "code": "COMP 233", "title": "Probability and Statistics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 205"] },
+              { "code": "BIOL 261", "title": "Molecular and General Genetics", "credits": 3.0, "prerequisites": ["BIOL 201", "CHEM 205", "CHEM 206"] },
+              { "code": "BIOL 266", "title": "Cell Biology", "credits": 3.0, "prerequisites": ["BIOL 201", "CHEM 205", "CHEM 206"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "CHEM 212", "title": "Analytical Chemistry for Biologists", "credits": 3.0, "prerequisites": ["CHEM 205", "CHEM 206", "MATH 205"] },
+              { "code": "CHEM 221", "title": "Introductory Organic Chemistry I", "credits": 3.0, "prerequisites": ["CHEM 205", "CHEM 206"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Fall",
+            "courses": [
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] },
+              { "code": "CHEM 271", "title": "Biochemistry I", "credits": 3.0, "prerequisites": ["CHEM 221"] },
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "BIOL 367", "title": "Molecular Biology", "credits": 3.0, "prerequisites": ["BIOL 261", "CHEM 271"] },
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "BIOL 481", "title": "Genome Structure", "credits": 3.0, "prerequisites": ["BIOL 367"] },
+              { "code": "ENCS 333", "title": "Research Methods, Ethics, Law and Regulation for Computational Biology", "credits": 3.0, "prerequisites": ["ENCS 282"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 354", "title": "Introduction to Software Engineering", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] },
+              { "code": "BIOL 479", "title": "Computational Biology", "credits": 3.0, "prerequisites": ["BIOL 261", "COMP 352"] }
+            ]
+          }
+        ],
+        "january": [
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "CHEM 212", "title": "Analytical Chemistry for Biologists", "credits": 3.0, "prerequisites": ["CHEM 205", "CHEM 206", "MATH 205"] },
+              { "code": "CHEM 221", "title": "Introductory Organic Chemistry I", "credits": 3.0, "prerequisites": ["CHEM 205", "CHEM 206"] },
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Summer",
+            "courses": [
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] },
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 233", "title": "Probability and Statistics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 205"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Fall",
+            "courses": [
+              { "code": "BIOL 261", "title": "Molecular and General Genetics", "credits": 3.0, "prerequisites": ["BIOL 201", "CHEM 205", "CHEM 206"] },
+              { "code": "BIOL 266", "title": "Cell Biology", "credits": 3.0, "prerequisites": ["BIOL 201", "CHEM 205", "CHEM 206"] },
+              { "code": "CHEM 271", "title": "Biochemistry I", "credits": 3.0, "prerequisites": ["CHEM 221"] },
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "BIOL 367", "title": "Molecular Biology", "credits": 3.0, "prerequisites": ["BIOL 261", "CHEM 271"] },
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 354", "title": "Computational Biology", "credits": 3.0, "prerequisites": ["BIOL 261", "COMP 352"] },
+              { "code": "BIOL 481", "title": "Genome Structure", "credits": 3.0, "prerequisites": ["BIOL 367"] },
+              { "code": "ENCS 333", "title": "Research Methods, Ethics, Law and Regulation for Computational Biology", "credits": 3.0, "prerequisites": ["ENCS 282"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "BIOL 479", "title": "Computational Biology", "credits": 3.0, "prerequisites": ["BIOL 261", "COMP 352"] }
+            ]
+          }
+        ],
+        "coop": [
+          {
+            "year": 1,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] },
+              { "code": "BIOL 261", "title": "Molecular and General Genetics", "credits": 3.0, "prerequisites": ["BIOL 201", "CHEM 205", "CHEM 206"] },
+              { "code": "BIOL 266", "title": "Cell Biology", "credits": 3.0, "prerequisites": ["BIOL 201", "CHEM 205", "CHEM 206"] },
+              { "code": "CHEM 221", "title": "Introductory Organic Chemistry I", "credits": 3.0, "prerequisites": ["CHEM 205", "CHEM 206"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "CHEM 212", "title": "Analytical Chemistry for Biologists", "credits": 3.0, "prerequisites": ["CHEM 205", "CHEM 206", "MATH 205"] },
+              { "code": "CHEM 271", "title": "Biochemistry I", "credits": 3.0, "prerequisites": ["CHEM 221"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 233", "title": "Probability and Statistics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 205"] },
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] }
+            ]
+          },
+          { "year": 2, "term": "Fall", "courses": [{ "code": "WORK TERM 1", "title": "Work Term 1", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "BIOL 367", "title": "Molecular Biology", "credits": 3.0, "prerequisites": ["BIOL 261", "CHEM 271"] },
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] }
+            ]
+          },
+          { "year": 2, "term": "Summer", "courses": [{ "code": "WORK TERM 2", "title": "Work Term 2", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 354", "title": "Computational Biology", "credits": 3.0, "prerequisites": ["BIOL 261", "COMP 352"] },
+              { "code": "BIOL 481", "title": "Genome Structure", "credits": 3.0, "prerequisites": ["BIOL 367"] },
+              { "code": "ENCS 333", "title": "Research Methods, Ethics, Law and Regulation for Computational Biology", "credits": 3.0, "prerequisites": ["ENCS 282"] }
+            ]
+          },
+          { "year": 3, "term": "Winter", "courses": [{ "code": "WORK TERM 3", "title": "Work Term 3", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 3,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "BIOL 479", "title": "Computational Biology", "credits": 3.0, "prerequisites": ["BIOL 261", "COMP 352"] }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "comp-computation-arts",
+      "degree": "BCompSc",
+      "name": "Joint Major in Computation Arts and Computer Science",
+      "department": "Computer Science and Software Engineering",
+      "graduation_requirements": {
+        "total_credits": 90,
+        "categories": [
+          { "name": "Computer Science Core", "credits": 33 },
+          { "name": "Computation Arts Core", "credits": 45 },
+          {
+            "name": "Required Courses",
+            "credits": 12,
+            "required_courses": [
+              { "code": "COMP 345", "title": "Advanced Program Design with C++", "credits": 4 },
+              { "code": "COMP 371", "title": "Computer Graphics", "credits": 4 },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3 },
+              { "code": "ENGR 411", "title": "Special Technical Report", "credits": 1 }
+            ]
+          }
+        ]
+      },
+      "sequences": {
+        "september": [
+          {
+            "year": 1,
+            "term": "Fall",
+            "courses": [
+              { "code": "CART 211", "title": "Creative Computing and Network Culture", "credits": 3.0, "prerequisites": [] },
+              { "code": "CART 214", "title": "Visual Form and Communication", "credits": 3.0, "prerequisites": [] },
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] },
+              { "code": "FFAR 248", "title": "Keywords: Reading the Arts Across the Disciplines", "credits": 6.0, "prerequisites": [] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "CART 212", "title": "Digital Media Studio I", "credits": 3.0, "prerequisites": ["CART 211"] },
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 233", "title": "Probability and Statistics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 205"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "FFAR 249", "title": "Keywords: Reading the Arts Across the Disciplines II", "credits": 3.0, "prerequisites": ["FFAR 248"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Fall",
+            "courses": [
+              { "code": "CART 210", "title": "New Media Theory", "credits": 3.0, "prerequisites": [] },
+              { "code": "COMP 345", "title": "Advanced Program Design with C++", "credits": 4.0, "prerequisites": ["COMP 352"] },
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "CART 310", "title": "Interaction Design Studio", "credits": 3.0, "prerequisites": ["CART 210"] },
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "CART 410", "title": "Research-Creation in the Computation Arts", "credits": 3.0, "prerequisites": ["CART 210", "CART 310"] },
+              { "code": "COMP 354", "title": "Introduction to Software Engineering", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 371", "title": "Computer Graphics", "credits": 4.0, "prerequisites": ["COMP 232", "COMP 352"] },
+              { "code": "ENGR 411", "title": "Special Technical Report", "credits": 1.0, "prerequisites": ["ENCS 282"] }
+            ]
+          }
+        ],
+        "coop": [
+          {
+            "year": 1,
+            "term": "Fall",
+            "courses": [
+              { "code": "CART 211", "title": "Creative Computing and Network Culture", "credits": 3.0, "prerequisites": [] },
+              { "code": "CART 214", "title": "Visual Form and Communication", "credits": 3.0, "prerequisites": [] },
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] },
+              { "code": "FFAR 248", "title": "Keywords: Reading the Arts Across the Disciplines", "credits": 6.0, "prerequisites": [] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "CART 212", "title": "Digital Media Studio I", "credits": 3.0, "prerequisites": ["CART 211"] },
+              { "code": "CART 210", "title": "New Media Theory", "credits": 3.0, "prerequisites": [] },
+              { "code": "COMP 228", "title": "System Hardware", "credits": 3.0, "prerequisites": ["COMP 248"], "corequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "FFAR 249", "title": "Keywords: Reading the Arts Across the Disciplines II", "credits": 3.0, "prerequisites": ["FFAR 248"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 233", "title": "Probability and Statistics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 205"] },
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] }
+            ]
+          },
+          { "year": 2, "term": "Fall", "courses": [{ "code": "WORK TERM 1", "title": "Work Term 1", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "CART 310", "title": "Interaction Design Studio", "credits": 3.0, "prerequisites": ["CART 210"] },
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["COMP 228", "COMP 352"] },
+              { "code": "COMP 354", "title": "Introduction to Software Engineering", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] }
+            ]
+          },
+          { "year": 2, "term": "Summer", "courses": [{ "code": "WORK TERM 2", "title": "Work Term 2", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "CART 410", "title": "Research-Creation in the Computation Arts", "credits": 3.0, "prerequisites": ["CART 210", "CART 310"] },
+              { "code": "COMP 345", "title": "Advanced Program Design with C++", "credits": 4.0, "prerequisites": ["COMP 352"] }
+            ]
+          },
+          { "year": 3, "term": "Winter", "courses": [{ "code": "WORK TERM 3", "title": "Work Term 3", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 3,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "COMP 371", "title": "Computer Graphics", "credits": 4.0, "prerequisites": ["COMP 232", "COMP 352"] },
+              { "code": "ENGR 411", "title": "Special Technical Report", "credits": 1.0, "prerequisites": ["ENCS 282"] }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "soen-general",
+      "degree": "BEng",
+      "name": "Software Engineering – General",
+      "department": "Computer Science and Software Engineering",
+      "graduation_requirements": {
+        "total_credits": 120,
+        "categories": [
+          { "name": "Engineering Core", "credits": 27.5 },
+          { "name": "Software Engineering Core", "credits": 46.5 },
+          { "name": "Computer Science Group: Software Engineering", "credits": 27 },
+          { "name": "Engineering and Natural Science Group: Software Engineering", "credits": 3 },
+          { "name": "Software Engineering Electives", "credits": 16 }
+        ]
+      },
+      "sequences": {
+        "september": [
+          {
+            "year": 1,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] },
+              { "code": "ENGR 201", "title": "Professional Practice and Responsibility", "credits": 1.5, "prerequisites": [] },
+              { "code": "ENGR 213", "title": "Applied Ordinary Differential Equations", "credits": 3.0, "prerequisites": ["MATH 205"], "corequisites": ["MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "ENGR 233", "title": "Applied Advanced Calculus", "credits": 3.0, "prerequisites": ["MATH 204", "MATH 205"] },
+              { "code": "SOEN 228", "title": "System Hardware", "credits": 4.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "SOEN 287", "title": "Web Programming", "credits": 3.0, "prerequisites": ["COMP 248"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] },
+              { "code": "ENGR 202", "title": "Sustainable Development and Environmental Stewardship", "credits": 1.5, "prerequisites": [] },
+              { "code": "SOEN 341", "title": "Software Process and Practices", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["SOEN 228", "COMP 352"] },
+              { "code": "ELEC 275", "title": "Principles of Electrical Engineering", "credits": 3.5, "prerequisites": ["PHYS 205"], "corequisites": ["ENGR 213"] },
+              { "code": "ENGR 371", "title": "Probability and Statistics in Engineering", "credits": 3.0, "prerequisites": ["ENGR 213", "ENGR 233"] },
+              { "code": "SOEN 331", "title": "Formal Methods for Software Engineering", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "ENGR 391", "title": "Numerical Methods in Engineering", "credits": 3.0, "prerequisites": ["ENGR 213", "ENGR 233", "COMP 248"] },
+              { "code": "SOEN 342", "title": "Software Requirements and Deployment", "credits": 4.0, "prerequisites": ["SOEN 341"] },
+              { "code": "SOEN 343", "title": "Software Architecture and Design", "credits": 4.0, "prerequisites": ["SOEN 341", "SOEN 342"] },
+              { "code": "SOEN 384", "title": "Management, Measurement and Quality Control", "credits": 3.0, "prerequisites": ["ENCS 282", "SOEN 341"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Winter",
+            "courses": [
+              { "code": "SOEN 363", "title": "Data Systems for Software Engineers", "credits": 3.0, "prerequisites": ["COMP 352"] },
+              { "code": "SOEN 345", "title": "Software Testing, Verification and Quality Assurance", "credits": 4.0, "prerequisites": ["SOEN 343"] },
+              { "code": "SOEN 357", "title": "User Interface Design", "credits": 3.0, "prerequisites": ["SOEN 341"] },
+              { "code": "SOEN 390", "title": "Software Engineering Team Design Project", "credits": 3.5, "prerequisites": ["SOEN 345", "SOEN 357"] }
+            ]
+          },
+          {
+            "year": 4,
+            "term": "Fall",
+            "courses": [
+              { "code": "ENGR 301", "title": "Engineering Management Principles and Economics", "credits": 3.0, "prerequisites": [] },
+              { "code": "SOEN 321", "title": "Information Systems Security", "credits": 3.0, "prerequisites": ["COMP 346"] },
+              { "code": "SOEN 490", "title": "Capstone Software Engineering Design Project", "credits": 6.0, "prerequisites": ["SOEN 390"] }
+            ]
+          },
+          {
+            "year": 4,
+            "term": "Winter",
+            "courses": [
+              { "code": "ENGR 392", "title": "Impact of Technology on Society", "credits": 3.0, "prerequisites": ["ENCS 282", "ENGR 201", "ENGR 202"] },
+              { "code": "SOEN 490", "title": "Capstone Software Engineering Design Project (cont.)", "credits": 0, "prerequisites": ["SOEN 390"] }
+            ]
+          }
+        ],
+        "january": [
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] },
+              { "code": "ENGR 201", "title": "Professional Practice and Responsibility", "credits": 1.5, "prerequisites": [] },
+              { "code": "ENGR 213", "title": "Applied Ordinary Differential Equations", "credits": 3.0, "prerequisites": ["MATH 205"], "corequisites": ["MATH 204"] },
+              { "code": "SOEN 228", "title": "System Hardware", "credits": 4.0, "prerequisites": ["MATH 203", "MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "ENGR 202", "title": "Sustainable Development and Environmental Stewardship", "credits": 1.5, "prerequisites": [] },
+              { "code": "ENGR 233", "title": "Applied Advanced Calculus", "credits": 3.0, "prerequisites": ["MATH 204", "MATH 205"] },
+              { "code": "SOEN 287", "title": "Web Programming", "credits": 3.0, "prerequisites": ["COMP 248"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] },
+              { "code": "ELEC 275", "title": "Principles of Electrical Engineering", "credits": 3.5, "prerequisites": ["PHYS 205"], "corequisites": ["ENGR 213"] },
+              { "code": "SOEN 341", "title": "Software Process and Practices", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] }
+            ]
+          },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["SOEN 228", "COMP 352"] },
+              { "code": "ENGR 371", "title": "Probability and Statistics in Engineering", "credits": 3.0, "prerequisites": ["ENGR 213", "ENGR 233"] },
+              { "code": "SOEN 331", "title": "Formal Methods for Software Engineering", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "ENGR 391", "title": "Numerical Methods in Engineering", "credits": 3.0, "prerequisites": ["ENGR 213", "ENGR 233", "COMP 248"] },
+              { "code": "SOEN 342", "title": "Software Requirements and Deployment", "credits": 4.0, "prerequisites": ["SOEN 341"] },
+              { "code": "SOEN 343", "title": "Software Architecture and Design", "credits": 4.0, "prerequisites": ["SOEN 341", "SOEN 342"] },
+              { "code": "SOEN 384", "title": "Management, Measurement and Quality Control", "credits": 3.0, "prerequisites": ["ENCS 282", "SOEN 341"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Winter",
+            "courses": [
+              { "code": "SOEN 363", "title": "Data Systems for Software Engineers", "credits": 3.0, "prerequisites": ["COMP 352"] },
+              { "code": "SOEN 345", "title": "Software Testing, Verification and Quality Assurance", "credits": 4.0, "prerequisites": ["SOEN 343"] },
+              { "code": "SOEN 357", "title": "User Interface Design", "credits": 3.0, "prerequisites": ["SOEN 341"] },
+              { "code": "SOEN 390", "title": "Software Engineering Team Design Project", "credits": 3.5, "prerequisites": ["SOEN 345", "SOEN 357"] }
+            ]
+          },
+          {
+            "year": 4,
+            "term": "Fall",
+            "courses": [
+              { "code": "ENGR 301", "title": "Engineering Management Principles and Economics", "credits": 3.0, "prerequisites": [] },
+              { "code": "SOEN 321", "title": "Information Systems Security", "credits": 3.0, "prerequisites": ["COMP 346"] },
+              { "code": "SOEN 490", "title": "Capstone Software Engineering Design Project", "credits": 6.0, "prerequisites": ["SOEN 390"] }
+            ]
+          },
+          {
+            "year": 4,
+            "term": "Winter",
+            "courses": [
+              { "code": "ENGR 392", "title": "Impact of Technology on Society", "credits": 3.0, "prerequisites": ["ENCS 282", "ENGR 201", "ENGR 202"] },
+              { "code": "SOEN 490", "title": "Capstone Software Engineering Design Project (cont.)", "credits": 0, "prerequisites": ["SOEN 390"] }
+            ]
+          }
+        ],
+        "coop": [
+          {
+            "year": 1,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 232", "title": "Mathematics for Computer Science", "credits": 3.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "COMP 248", "title": "Object-Oriented Programming I", "credits": 3.5, "prerequisites": ["MATH 204"] },
+              { "code": "ENGR 201", "title": "Professional Practice and Responsibility", "credits": 1.5, "prerequisites": [] },
+              { "code": "ENGR 213", "title": "Applied Ordinary Differential Equations", "credits": 3.0, "prerequisites": ["MATH 205"], "corequisites": ["MATH 204"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 249", "title": "Object-Oriented Programming II", "credits": 3.5, "prerequisites": ["COMP 248", "MATH 203"], "corequisites": ["MATH 205"] },
+              { "code": "ENGR 233", "title": "Applied Advanced Calculus", "credits": 3.0, "prerequisites": ["MATH 204", "MATH 205"] },
+              { "code": "SOEN 228", "title": "System Hardware", "credits": 4.0, "prerequisites": ["MATH 203", "MATH 204"] },
+              { "code": "SOEN 287", "title": "Web Programming", "credits": 3.0, "prerequisites": ["COMP 248"] }
+            ]
+          },
+          {
+            "year": 1,
+            "term": "Summer",
+            "courses": [
+              { "code": "COMP 348", "title": "Principles of Programming Languages", "credits": 3.0, "prerequisites": ["COMP 249"] },
+              { "code": "COMP 352", "title": "Data Structures and Algorithms", "credits": 3.0, "prerequisites": ["COMP 249"], "corequisites": ["COMP 232"] },
+              { "code": "ENCS 282", "title": "Technical Writing and Communication", "credits": 3.0, "prerequisites": ["EWT"] },
+              { "code": "ENGR 202", "title": "Sustainable Development and Environmental Stewardship", "credits": 1.5, "prerequisites": [] },
+              { "code": "ENGR 371", "title": "Probability and Statistics in Engineering", "credits": 3.0, "prerequisites": ["ENGR 213", "ENGR 233"] }
+            ]
+          },
+          { "year": 2, "term": "Fall", "courses": [{ "code": "WORK TERM 1", "title": "Work Term 1", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 2,
+            "term": "Winter",
+            "courses": [
+              { "code": "COMP 346", "title": "Operating Systems", "credits": 4.0, "prerequisites": ["SOEN 228", "COMP 352"] },
+              { "code": "ELEC 275", "title": "Principles of Electrical Engineering", "credits": 3.5, "prerequisites": ["PHYS 205"], "corequisites": ["ENGR 213"] },
+              { "code": "SOEN 331", "title": "Formal Methods for Software Engineering", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "SOEN 341", "title": "Software Process and Practices", "credits": 4.0, "prerequisites": ["COMP 352", "ENCS 282"] }
+            ]
+          },
+          { "year": 2, "term": "Summer", "courses": [{ "code": "WORK TERM 2", "title": "Work Term 2", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 3,
+            "term": "Fall",
+            "courses": [
+              { "code": "COMP 335", "title": "Introduction to Theoretical Computer Science", "credits": 3.0, "prerequisites": ["COMP 232", "COMP 249"] },
+              { "code": "SOEN 342", "title": "Software Requirements and Deployment", "credits": 4.0, "prerequisites": ["SOEN 341"] },
+              { "code": "SOEN 343", "title": "Software Architecture and Design", "credits": 4.0, "prerequisites": ["SOEN 341", "SOEN 342"] },
+              { "code": "SOEN 384", "title": "Management, Measurement and Quality Control", "credits": 3.0, "prerequisites": ["ENCS 282", "SOEN 341"] }
+            ]
+          },
+          {
+            "year": 3,
+            "term": "Winter",
+            "courses": [
+              { "code": "SOEN 363", "title": "Data Systems for Software Engineers", "credits": 3.0, "prerequisites": ["COMP 352"] },
+              { "code": "SOEN 345", "title": "Software Testing, Verification and Quality Assurance", "credits": 4.0, "prerequisites": ["SOEN 343"] },
+              { "code": "SOEN 357", "title": "User Interface Design", "credits": 3.0, "prerequisites": ["SOEN 341"] },
+              { "code": "SOEN 390", "title": "Software Engineering Team Design Project", "credits": 3.5, "prerequisites": ["SOEN 345", "SOEN 357"] }
+            ]
+          },
+          { "year": 3, "term": "Summer", "courses": [{ "code": "WORK TERM 3", "title": "Work Term 3", "credits": 0, "prerequisites": [], "isWorkTerm": true }] },
+          {
+            "year": 4,
+            "term": "Fall",
+            "courses": [
+              { "code": "ENGR 301", "title": "Engineering Management Principles and Economics", "credits": 3.0, "prerequisites": [] },
+              { "code": "SOEN 321", "title": "Information Systems Security", "credits": 3.0, "prerequisites": ["COMP 346"] },
+              { "code": "SOEN 490", "title": "Capstone Software Engineering Design Project", "credits": 6.0, "prerequisites": ["SOEN 390"] }
+            ]
+          },
+          {
+            "year": 4,
+            "term": "Winter",
+            "courses": [
+              { "code": "ENGR 392", "title": "Impact of Technology on Society", "credits": 3.0, "prerequisites": ["ENCS 282", "ENGR 201", "ENGR 202"] },
+              { "code": "ENGR 391", "title": "Numerical Methods in Engineering", "credits": 3.0, "prerequisites": ["ENGR 213", "ENGR 233", "COMP 248"] },
+              { "code": "SOEN 490", "title": "Capstone Software Engineering Design Project (cont.)", "credits": 0, "prerequisites": ["SOEN 390"] }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

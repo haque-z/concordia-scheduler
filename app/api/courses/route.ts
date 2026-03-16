@@ -1,10 +1,13 @@
-export async function GET() {
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const subject = searchParams.get("subject") || "*";
+
   const user = process.env.CONCORDIA_API_USER;
   const key = process.env.CONCORDIA_API_KEY;
   const credentials = btoa(`${user}:${key}`);
 
   const response = await fetch(
-    "https://opendata.concordia.ca/API/v1/course/catalog/filter/*/*/*",
+    `https://opendata.concordia.ca/API/v1/course/catalog/filter/${subject}/*/*`,
     {
       headers: {
         Authorization: `Basic ${credentials}`,
