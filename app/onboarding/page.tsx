@@ -11,7 +11,6 @@ export default function Onboarding() {
   const [step, setStep] = useState<Step>("program");
   const [selectedProgram, setSelectedProgram] = useState("");
   const [selectedEntry, setSelectedEntry] = useState("");
-  const [selectedCoop, setSelectedCoop] = useState("");
 
   function handleProgramSelect(programId: string) {
     setSelectedProgram(programId);

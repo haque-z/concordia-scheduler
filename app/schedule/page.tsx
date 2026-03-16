@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState} from "react";
 import { useRouter } from "next/navigation";
 import programs from "@/data/programs.json";
 
@@ -296,11 +296,11 @@ function scoreCombo(combo: ScheduleCombination, preference: Preference): number 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 
 const COURSE_COLORS = [
-  { bg: "bg-amaranth", text: "text-white", border: "border-red-800" },
-  { bg: "bg-gunmetal", text: "text-white", border: "border-gray-800" },
-  { bg: "bg-teagreen", text: "text-gunmetal", border: "border-green-400" },
-  { bg: "bg-dustgrey", text: "text-gunmetal", border: "border-gray-400" },
-  { bg: "bg-[#d4a373]", text: "text-white", border: "border-yellow-700" },
+  { bg: "bg-[#f4a9b0]", text: "text-gunmetal", border: "border-[#c0404f]" },
+  { bg: "bg-[#a8d5e2]", text: "text-gunmetal", border: "border-[#3a8fa3]" },
+  { bg: "bg-[#b5e2b5]", text: "text-gunmetal", border: "border-[#3a8a3a]" },
+  { bg: "bg-[#f7d9a0]", text: "text-gunmetal", border: "border-[#c49020]" },
+  { bg: "bg-[#d5b8e8]", text: "text-gunmetal", border: "border-[#7a3fa8]" },
 ];
 
 function WeeklyCalendar({
@@ -345,7 +345,7 @@ function WeeklyCalendar({
           {timeLabels.map((label, i) => (
             <div
               key={i}
-              className="absolute right-1 text-[10px] text-gunmetal/40 leading-none"
+              className="absolute right-1 text-[10px] text-gunmetal leading-none"
               style={{ top: `${(i / (END_HOUR - START_HOUR)) * 100}%`, transform: "translateY(-50%)" }}
             >
               {label}
@@ -375,7 +375,7 @@ function WeeklyCalendar({
                   <div
                     key={i}
                     onClick={() => onTogglePin(courseCode)}
-                    className={`absolute w-full rounded px-1 py-0.5 overflow-hidden cursor-pointer border-2 transition-opacity ${color.bg} ${color.text} ${isPinned ? color.border : "border-transparent"}`}
+                    className={`absolute w-full rounded-none px-1 py-0.5 overflow-hidden cursor-pointer border-2 transition-opacity text-center ${color.bg} ${color.text} ${isPinned ? color.border : "border-transparent"}`}
                     style={{ top: `${top}%`, height: `${height}%` }}
                     title={isPinned ? "Click to unpin" : "Click to pin this configuration"}
                   >
@@ -674,21 +674,6 @@ function togglePin(courseCode: string) {
     setCurrentComboIndex(0);
   }, [pinnedCourses]);  // eslint-disable-line react-hooks/exhaustive-deps
 
-  const handleGenerate = useCallback(() => {
-    setGenerating(true);
-    setTimeout(() => {
-      const options = selectedCourses.map((c) => buildCourseOptions(c.subject, c.catalog, c.sections));
-      setAllCourseOptions(options);
-      const pinnedArr = selectedCourses.map((c) => pinnedCourses[c.code] ?? null);
-      const combos = generateCombinations(options, pinnedArr);
-      const sorted = [...combos].sort((a, b) => scoreCombo(b, preference) - scoreCombo(a, preference));
-      setCombinations(sorted);
-      setCurrentComboIndex(0);
-      setGenerated(true);
-      setGenerating(false);
-    }, 50);
-  }, [selectedCourses, preference, pinnedCourses]);
-
   if (!profile) {
     return (
       <main className="min-h-screen flex items-center justify-center bg-linen">
@@ -805,13 +790,13 @@ function togglePin(courseCode: string) {
                   <button
                     key={val}
                     onClick={() => {
-  setPreference(val);
-  if (generated && combinations.length > 0) {
-    const sorted = [...combinations].sort((a, b) => scoreCombo(b, val) - scoreCombo(a, val));
-    setCombinations(sorted);
-    setCurrentComboIndex(0);
-  }
-}}
+                      setPreference(val);
+                      if (generated && combinations.length > 0) {
+                        const sorted = [...combinations].sort((a, b) => scoreCombo(b, val) - scoreCombo(a, val));
+                        setCombinations(sorted);
+                        setCurrentComboIndex(0);
+                      }
+                    }}
                     className={`px-3 py-1.5 rounded-xl text-xs font-medium border transition-colors cursor-pointer ${preference === val ? "bg-gunmetal text-white border-gunmetal" : "bg-linen text-gunmetal border-dustgrey hover:border-gunmetal"}`}
                   >
                     {label}
@@ -820,14 +805,6 @@ function togglePin(courseCode: string) {
               </div>
             </div>
 
-            {/* Generate button */}
-            <button
-              onClick={handleGenerate}
-              disabled={selectedCourses.length === 0 || selectedCourses.some((c) => c.loading) || generating}
-              className="w-full bg-amaranth text-white font-semibold py-3 rounded-2xl hover:bg-gunmetal transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {generating ? "Generating..." : "Generate Schedules"}
-            </button>
           </div>
 
           {/* Right panel */}
@@ -857,11 +834,6 @@ function togglePin(courseCode: string) {
                     <span className="text-sm font-medium text-gunmetal">
                       Result {currentComboIndex + 1} of {combinations.length}
                     </span>
-                    {Object.keys(pinnedCourses).length > 0 && (
-                      <div className="text-xs text-gunmetal/40 mt-0.5">
-                        📌 {Object.keys(pinnedCourses).length} course{Object.keys(pinnedCourses).length > 1 ? "s" : ""} pinned
-                      </div>
-                    )}
                   </div>
                   <button
                     onClick={() => setCurrentComboIndex((i) => Math.min(combinations.length - 1, i + 1))}
