@@ -25,11 +25,29 @@ type TermBlock = {
   courses: Course[];
 };
 
+type CreditCategory = {
+  name: string;
+  credits: number;
+};
+
+type GraduationRequirements = {
+  total_credits: number;
+  categories: CreditCategory[];
+  notes?: string[];
+};
+
+type Program = {
+  id: string;
+  degree: string;
+  name: string;
+  department: string;
+  graduation_requirements: GraduationRequirements;
+  sequences: Record<string, TermBlock[]>;
+};
+
 export default function Dashboard() {
   const router = useRouter();
   const [profile, setProfile] = useState<StudentProfile | null>(null);
-  const [sequence, setSequence] = useState<TermBlock[]>([]);
-  const [programData, setProgramData] = useState<any>(null);
 
   useEffect(() => {
     const stored = localStorage.getItem("studentProfile");
@@ -37,24 +55,24 @@ export default function Dashboard() {
       router.push("/onboarding");
       return;
     }
-    const p: StudentProfile = JSON.parse(stored);
-    setProfile(p);
-
-    const program = programs.programs.find((prog) => prog.id === p.programId);
-    if (!program) return;
-    setProgramData(program);
-
-    const sequenceKey = p.coop
-      ? "coop"
-      : p.entry === "january"
-      ? "january"
-      : "september";
-
-    const seq =
-      (program.sequences as any)[sequenceKey] ||
-      (program.sequences as any)["september"];
-    setSequence(seq);
+    setProfile(JSON.parse(stored));
   }, [router]);
+
+  const programData = profile
+    ? ((programs.programs.find(
+        (prog) => prog.id === profile.programId
+      ) as Program | undefined) ?? null)
+    : null;
+
+  const sequence: TermBlock[] = programData
+    ? (programData.sequences[
+        profile?.coop
+          ? "coop"
+          : profile?.entry === "january"
+          ? "january"
+          : "september"
+      ] ?? programData.sequences["september"])
+    : [];
 
   if (!profile || !programData) {
     return (
@@ -65,16 +83,24 @@ export default function Dashboard() {
   }
 
   const totalRequired = programData.graduation_requirements.total_credits;
+
   const totalPlanned = sequence.reduce(
-    (sum: number, term: TermBlock) =>
+    (sum, term) =>
       sum + term.courses.reduce((s, c) => s + (c.credits || 0), 0),
     0
   );
 
+  const runningTotals = sequence.reduce<number[]>((acc, term) => {
+    const termCredits = term.courses.reduce((s, c) => s + (c.credits || 0), 0);
+    const prev = acc.length > 0 ? acc[acc.length - 1] : 0;
+    return [...acc, prev + termCredits];
+  }, []);
+
   return (
     <main className="min-h-screen bg-linen p-6">
-      {/* Top bar */}
       <div className="max-w-4xl mx-auto">
+
+        {/* Top bar */}
         <div className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-2xl font-bold text-amaranth">
@@ -109,12 +135,15 @@ export default function Dashboard() {
             <div
               className="bg-amaranth h-2.5 rounded-full transition-all"
               style={{
-                width: `${Math.min((totalPlanned / totalRequired) * 100, 100)}%`,
+                width: `${Math.min(
+                  (totalPlanned / totalRequired) * 100,
+                  100
+                )}%`,
               }}
             />
           </div>
           <div className="flex flex-wrap gap-3 mt-4">
-            {programData.graduation_requirements.categories.map((cat: any) => (
+            {programData.graduation_requirements.categories.map((cat) => (
               <div
                 key={cat.name}
                 className="text-xs bg-linen border border-dustgrey rounded-lg px-3 py-1.5"
@@ -129,7 +158,7 @@ export default function Dashboard() {
         {/* Timeline */}
         <h2 className="font-semibold text-gunmetal mb-3">Suggested Sequence</h2>
         <div className="flex flex-col gap-4">
-          {sequence.map((term: TermBlock, i: number) => {
+          {sequence.map((term, i) => {
             const termCredits = term.courses.reduce(
               (s, c) => s + (c.credits || 0),
               0
@@ -143,9 +172,14 @@ export default function Dashboard() {
                   <h3 className="font-semibold text-gunmetal">
                     Year {term.year} &mdash; {term.term}
                   </h3>
-                  <span className="text-xs text-gunmetal bg-linen border border-dustgrey rounded-full px-2.5 py-1">
-                    {termCredits} credits
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-gunmetal bg-linen border border-dustgrey rounded-full px-2.5 py-1">
+                      +{termCredits} credits
+                    </span>
+                    <span className="text-xs text-white bg-amaranth rounded-full px-2.5 py-1">
+                      {runningTotals[i]} / {totalRequired} total
+                    </span>
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   {term.courses.map((course, j) => (
